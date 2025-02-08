@@ -19,50 +19,45 @@ $this->pageTitle = Yii::app()->name;
 			</div>
 		</div>
 		<div>
-			<img class="w-[600px]" src="/images/money.svg" alt="money image">
+			<img class="w-[600px] rounded-4xl" src="/images/hero-section.jpeg" alt="money image">
 		</div>
 	</div>
 	<div class="flex justify-center bg-zinc-50 p-24">
 		<div class="flex-[0_0_40%] m-12 p-12 mt-0 pt-0 max-w-[580px]">
-			<h2 class="nunito-sans leading-[4.5rem] font-bold text-zinc-800 text-[64px] mb-4 w-auto 2xl:w-[460px]">Key
+			<h2 class="nunito-sans leading-[4.5rem] font-bold text-zinc-800 text-[64px] mt-12 mb-4 w-auto 2xl:w-[460px]">Key
 				Features & Benefits</h2>
-			<p class="text-zinc-600 text-lg">Unlock Your Financial Potential with Smart, Easy-to-Use Tools</p>
+			<p class="text-zinc-600 text-lg mb-12">Unlock Your Financial Potential with Smart, Easy-to-Use Tools</p>
+			<button class="nunito-sans font-semibold text-sm border-2 border-zinc-200 shadow-lg rounded-lg px-6 py-3 cursor-pointer hover:scale-[110%] transition-all duration-200">
+				Try out
+			</button>
 		</div>
-		<ul class="flex-[0_0_45%] grid grid-cols-2 grid-rows-2 gap-8">
-			<li class="flex flex-col gap-y-2 pb-8 border-dotted border-b-3 border-zinc-200">
-				<div class="flex items-center gap-2">
-					<span class="rounded-lg bg-zinc-200/70 p-3">
-						<i data-lucide="chart-no-axes-combined" class="text-sky-600 size-10"></i>
-					</span>
-					<h3 class="text-slate-800 text-xl font-semibold">Expense Tracking</h3>
-				</div>
+		<ul class="flex-[0_0_30%] grid grid-cols-2 grid-rows-2 gap-8">
+			<li class="flex flex-col gap-y-2 bg-zinc-100/50 p-8 rounded-xl">
+				<span class="mb-8">
+					<i data-lucide="chart-no-axes-combined" class="text-sky-600 size-10"></i>
+				</span>
+				<h3 class="text-slate-800 text-xl font-semibold">Expense Tracking</h3>
 				<p class="text-zinc-600 text-lg">Stay on top of you spending with real-time insights.</p>
 			</li>
-			<li class="flex flex-col gap-y-2 pb-8 border-dotted border-b-3 border-zinc-200">
-				<div class="flex items-center gap-2">
-					<span class="rounded-lg bg-zinc-200/70 p-3">
-						<i data-lucide="bot" class="text-sky-600 size-10"></i>
-					</span>
-					<h3 class="text-slate-800 text-xl font-semibold">Automated Budgeting</h3>
-				</div>
+			<li class="flex flex-col gap-y-2 bg-zinc-100/50 p-8 rounded-xl">
+				<span class="mb-8">
+					<i data-lucide="bot" class="text-sky-600 size-10"></i>
+				</span>
+				<h3 class="text-slate-800 text-xl font-semibold">Automated Budgeting</h3>
 				<p class="text-zinc-600 text-lg">Let AI help you save smarter, not harder.</p>
 			</li>
-			<li class="flex flex-col gap-y-2 pb-8">
-				<div class="flex items-center gap-2">
-					<span class="rounded-lg bg-zinc-200/70 p-3">
-						<i data-lucide="hand-coins" class="text-sky-600 size-10"></i>
-					</span>
-					<h3 class="text-slate-800 text-xl font-semibold">Investment Management</h3>
-				</div>
+			<li class="flex flex-col gap-y-2 bg-zinc-100/50 p-8 rounded-xl">
+				<span class="mb-8">
+					<i data-lucide="hand-coins" class="text-sky-600 size-10"></i>
+				</span>
+				<h3 class="text-slate-800 text-xl font-semibold">Investment Management</h3>
 				<p class="text-zinc-600 text-lg">Grow your wealth with smart investment tools.</p>
 			</li>
-			<li class="flex flex-col gap-y-2 pb-8">
-				<div class="flex items-center gap-2">
-					<span class="rounded-lg bg-zinc-200/70 p-3">
-						<i data-lucide="shield-plus" class="text-sky-600 size-10"></i>
-					</span>
-					<h3 class="text-slate-800 text-xl font-semibold">Secury & Privacy</h3>
-				</div>
+			<li class="flex flex-col gap-y-2 bg-zinc-100/50 p-8 rounded-xl">
+				<span class="mb-8">
+					<i data-lucide="shield-plus" class="text-sky-600 size-10"></i>
+				</span>
+				<h3 class="text-slate-800 text-xl font-semibold">Secury & Privacy</h3>
 				<p class="text-zinc-600 text-lg">Your data is encrypted and protected at all times.</p>
 			</li>
 		</ul>
@@ -95,9 +90,8 @@ $this->pageTitle = Yii::app()->name;
 				</li>
 			</ul>
 		</div>
-		<div class="flex-[0_0_45%] flex justify-center w-full min-h-[620px] max-h-[620px] py-10 pr-8">
-			<img class="w-full h-full object-cover rounded-4xl" src="/images/why-choose-us_banner.webp"
-				alt="why choose us banner">
+		<div class="flex-[0_0_30%] flex justify-center w-full min-h-[620px] max-h-[620px] py-10 pr-8">
+			<img class="object-contain rounded-4xl" src="/images/why-choose-us.jpeg" alt="why choose us banner">
 		</div>
 	</div>
 	<div class="flex gap-12 bg-zinc-100 p-24">
@@ -125,14 +119,14 @@ $this->pageTitle = Yii::app()->name;
 														<div class="flex">
 																<i v-for="star in 5" 
 																	 :key="star" 
-																	 class="w-5 h-5 text-yellow-500" 
+																	 class="w-5 h-5" 
 																	 :class="{'text-gray-300': star > testimonial.rating}"
-																	 data-lucide="star" fill="orange" stroke-width="0"></i>
+																	 data-lucide="star" fill="#ffd250" stroke-width="0"></i>
 														</div>
 												</div>
 										</div>
-										<p class="text-gray-700 text-lg mb-4">{{ testimonial.message }}</p>
-										<span class="text-gray-500 text-xs">{{ testimonial.date }}</span>
+										<p class="nunito-sans font-semibold text-gray-900 text-lg mb-4">{{ testimonial.message }}</p>
+										<span class="text-gray-500 text-sm">{{ testimonial.date }}</span>
 								</div>
 						`
 	});
