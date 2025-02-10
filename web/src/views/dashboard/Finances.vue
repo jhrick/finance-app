@@ -1,3 +1,3 @@
 <template>
-  <h1>Tamo aí</h1>
+  <h1>Finances</h1>
 </template>
