@@ -1,12 +1,9 @@
 <?php
-
-class DashboardController extends Controller
+class DashboardController extends ApiController
 {
-	public $layout = "dashboard";
-
 	public function actionIndex()
 	{
-		$this->render('index');
+		echo json_encode(['message' => 'dashboard']);
 	}
 
 	// Uncomment the following methods and override them if needed

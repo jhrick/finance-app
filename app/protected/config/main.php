@@ -1,82 +1,72 @@
 <?php
-
-// uncomment the following to define a path alias
-// Yii::setPathOfAlias('local','path/to/local-folder');
-
-// This is the main Web application configuration. Any writable
-// CWebApplication properties can be configured here.
-return array(
-	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'Finance app',
+return [
+	'basePath' => dirname(__FILE__) . DIRECTORY_SEPARATOR . '..',
+	'name' => 'Finance app',
 
 	// preloading 'log' component
-	'preload'=>array('log'),
+	'preload' => ['log'],
 
 	// autoloading model and component classes
-	'import'=>array(
+	'import' => [
 		'application.models.*',
 		'application.components.*',
-	),
+	],
 
-	'modules'=>array(
-		'gii'=>array(
-			'class'=>'system.gii.GiiModule',
-			'password'=>'adminadmin',
+	'modules' => [
+		'gii' => [
+			'class' => 'system.gii.GiiModule',
+			'password' => 'adminadmin',
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
-			'ipFilters'=>['172.*'],
-		),
-	),
+			'ipFilters' => ['172.*'],
+		],
+	],
 
 	// application components
-	'components'=>array(
-
-		'user'=>array(
+	'components' => [
+		'response' => [
+			'format' => 'json',
+		],
+		'user' => [
 			// enable cookie-based authentication
-			'allowAutoLogin'=>true,
-		),
+			'allowAutoLogin' => true,
+		],
 
 		// uncomment the following to enable URLs in path-format
 		/*
-		'urlManager'=>array(
-			'urlFormat'=>'path',
-			'rules'=>array(
-				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
-				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
-				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
-			),
-		),
-		*/
+									'urlManager'=>[
+										'urlFormat'=>'path',
+										'rules'=>[
+											'<controller:\w+>/<id:\d+>'=>'<controller>/view',
+											'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
+											'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
+										),
+									),
+									*/
 
 		// database settings are configured in database.php
-		'db'=>require(dirname(__FILE__).'/database.php'),
+		'db' => require dirname(__FILE__) . '/database.php',
 
-		'errorHandler'=>array(
+		'errorHandler' => [
 			// use 'site/error' action to display errors
-			'errorAction'=>YII_DEBUG ? null : 'site/error',
-		),
+			'errorAction' => 'site/error',
+		],
 
-		'log'=>array(
-			'class'=>'CLogRouter',
-			'routes'=>array(
-				array(
-					'class'=>'CFileLogRoute',
-					'levels'=>'error, warning',
-				),
-				// uncomment the following to show log messages on web pages
-				/*
-				array(
-					'class'=>'CWebLogRoute',
-				),
-				*/
-			),
-		),
+		'log' => [
+			'class' => 'CLogRouter',
+			'routes' => [
+				[
+					'class' => 'CFileLogRoute',
+					'levels' => 'error, warning',
+				],
+			],
+		],
 
-	),
+	],
 
 	// application-level parameters that can be accessed
 	// using Yii::app()->params['paramName']
-	'params'=>array(
+	'params' => [
 		// this is used in contact page
-		'adminEmail'=>'webmaster@example.com',
-	),
-);
+		'adminEmail' => 'webmaster@example.com',
+	],
+];
