@@ -1,2 +1,4 @@
 .env
 **/node_modules/
+
+app/protected/runtime/application.log
