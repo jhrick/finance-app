@@ -23,6 +23,10 @@ return [
 
 	// application components
 	'components' => [
+		'request' => [
+			'enableCookieValidation' => false,
+		],
+
 		'response' => [
 			'format' => 'json',
 		],
@@ -33,15 +37,15 @@ return [
 
 		// uncomment the following to enable URLs in path-format
 		/*
-									'urlManager'=>[
-										'urlFormat'=>'path',
-										'rules'=>[
-											'<controller:\w+>/<id:\d+>'=>'<controller>/view',
-											'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
-											'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
-										),
-									),
-									*/
+						'urlManager'=>[
+							'urlFormat'=>'path',
+							'rules'=>[
+								'<controller:\w+>/<id:\d+>'=>'<controller>/view',
+								'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
+								'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
+							),
+						),
+						*/
 
 		// database settings are configured in database.php
 		'db' => require dirname(__FILE__) . '/database.php',
@@ -61,6 +65,12 @@ return [
 			],
 		],
 
+	],
+
+	'behaviors' => [
+		'corsFilter' => [
+			'class' => 'application.components.CorsBehavior'
+		]
 	],
 
 	// application-level parameters that can be accessed

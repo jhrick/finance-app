@@ -31,7 +31,7 @@ const getSection = () => {
   <Modal :name="modalName">
     <ModalHeader title="Settings" />
     <div class="flex gap-x-4 min-h-[28rem]">
-      <aside class="pt-4 px-6 min-h-[28rem] min-w-[16rem] w-[80%] border-r-[0.15rem] bg-zinc-200/50 border-zinc-200">
+      <aside class="pt-4 px-6 min-h-[28rem] min-w-[16rem] border-r-[0.15rem] bg-zinc-200/50 border-zinc-200">
         <ul class="flex flex-col min-w-8">
           <li v-for="setting in settings" :key="setting.name" @click="() => handleToggleSection(setting)"
             :class="`cursor-pointer transition-all duration-200 ease-in-out rounded-2xl p-[0.8rem] pr-16 flex items-center gap-x-2 mb-2
@@ -41,7 +41,7 @@ const getSection = () => {
           </li>
         </ul>
       </aside>
-      <main class="flex-[0_0_70%] w-[36rem] min-h-[28rem] p-4">
+      <main class="flex-[0_0_70%] min-w-[36rem] max-w-[36rem] min-h-[28rem] max-h-[28rem] overflow-scroll p-4">
         <component :is="getSection()?.content" />
       </main>
     </div>
